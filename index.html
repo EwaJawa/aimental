@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI w zdrowiu psychicznym — interaktywne i rzetelne źródło wiedzy o sztucznej inteligencji w psychologii, psychoterapii i psychiatrii. Przegląd badań naukowych, statystyk i zagrożeń.">
+    <meta name="keywords" content="sztuczna inteligencja, zdrowie psychiczne, AI psychologia, chatbot terapeutyczny, psychiatria AI, Woebot, MoodMon, e-mental health">
+    <meta name="author" content="Akademicki Projekt Badawczy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ewajawa.github.io/aimediator/">
+    <meta property="og:title" content="Sztuczna Inteligencja a Zdrowie Psychiczne — Fakty, Dane, Wskazówki">
+    <meta property="og:description" content="Odkryj naukowe fakty na temat roli AI w psychiatrii i psychologii. Rzetelne statystyki, certyfikowane badania i praktyczne wskazówki bezpieczeństwa.">
+    <meta property="og:image" content="https://ewajawa.github.io/aimediator/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sztuczna Inteligencja a Zdrowie Psychiczne">
+    <meta property="twitter:description" content="Naukowe analizy, rzetelne statystyki oraz wytyczne etyczne dotyczące wdrożenia AI w terapii i diagnozie psychologicznej.">
+
+    <title>AI w zdrowiu psychicznym — Fakty, Dane, Wskazówki</title>
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container" aria-hidden="true">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- STICKY HEADER & NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="logo" aria-label="Strona główna - AI w zdrowiu psychicznym">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                </svg>
+                <span>AI w zdrowiu psychicznym</span>
+            </a>
+            
+            <nav aria-label="Menu główne">
+                <button class="mobile-toggle" aria-label="Otwórz menu nawigacji" aria-expanded="false" aria-controls="nav-list">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="nav-list">
+                    <li><a href="#home" class="nav-link active">Strona główna</a></li>
+                    <li><a href="#research" class="nav-link">Badania naukowe</a></li>
+                    <li><a href="#statistics" class="nav-link">Statystyki</a></li>
+                    <li><a href="#risks" class="nav-link">Zagrożenia i wskazówki</a></li>
+                    <li><a href="#specialists" class="nav-link">Dla specjalistów</a></li>
+                    <li><a href="#about" class="nav-link">O projekcie</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- SECTION 1: HERO (STRONA GŁÓWNA) -->
+        <section id="home" aria-labelledby="hero-heading">
+            <div class="container hero-wrapper">
+                <div class="hero-content">
+                    <h1 id="hero-heading">Sztuczna inteligencja a zdrowie psychiczne — fakty, dane, wskazówki</h1>
+                    <p>W ostatnich latach sztuczna inteligencja rewolucjonizuje dziedzinę psychiatrii i psychologii. Od w pełni zautomatyzowanych chatbotów terapeutycznych po zaawansowane narzędzia wspierające diagnozę kliniczną — technologia ta staje się integralnym, choć wciąż kontrowersyjnym elementem cyfrowego wsparcia. Niniejsza witryna to niezależne, akademickie kompendium wiedzy oparte na recenzowanych badaniach naukowych, którego celem jest rzetelne i neutralne przedstawienie szans, zagrożeń oraz standardów etycznych w obszarze <em>e-Mental Health</em>.</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#research" class="btn btn-primary">
+                            Poznaj badania naukowe
+                            <svg style="width:1.2rem; height:1.2rem; fill:none; stroke:currentColor; stroke-width:2;" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#risks" class="btn btn-outline">Zasady bezpieczeństwa</a>
+                    </div>
+                </div>
+                <div class="hero-graphic">
+                    <img class="hero-image" src="aimental.png" alt="Symboliczne połączenie psychologii i sztucznej inteligencji">
+                </div>
+            </div>
+
+            <!-- Teaser Cards Container -->
+            <div class="container reveal">
+                <div class="teaser-grid" role="list">
+                    <div class="teaser-card" role="listitem" onclick="document.querySelector('#research').scrollIntoView({behavior: 'smooth'})">
+                        <div class="teaser-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M12 3l8 8-8 8M12 21l-8-8 8-8"/></svg>
+                        </div>
+                        <h3>Badania naukowe</h3>
+                        <p>Analiza recenzowanych publikacji medycznych oraz innowacyjnych wdrożeń na polskich uczelniach wyższych.</p>
+                    </div>
+                    <div class="teaser-card" role="listitem" onclick="document.querySelector('#statistics').scrollIntoView({behavior: 'smooth'})">
+                        <div class="teaser-icon">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                        </div>
+                        <h3>Statystyki i dane</h3>
+                        <p>Twarde dane statystyczne o skali użytkowania AI, demografii oraz rzeczywistej ocenie skuteczności klinicznej.</p>
+                    </div>
+                    <div class="teaser-card" role="listitem" onclick="document.querySelector('#risks').scrollIntoView({behavior: 'smooth'})">
+                        <div class="teaser-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm1 14h-2v-2h2v2zm0-4h-2V8h2v4z"/></svg>
+                        </div>
+                        <h3>Zagrożenia i wytyczne</h3>
+                        <p>Zestawienie ryzyk halucynacji AI, ochrony prywatności RODO oraz 5 złotych zasad bezpiecznego korzystania.</p>
+                    </div>
+                </div>
+
+                <!-- Credibility Banner -->
+                <div class="credibility-banner" role="status">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zm-1-6l-3-3 1.4-1.4 1.6 1.6 3.6-3.6 1.4 1.4-5 5z"/></svg>
+                    <span>Ta strona opiera się wyłącznie na recenzowanych badaniach naukowych, danych akademickich oraz wiarygodnych raportach branżowych.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: BADANIA NAUKOWE -->
+        <section id="research" aria-labelledby="research-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="research-heading">Badania naukowe i projekty akademickie</h2>
+                    <p>Przegląd kluczowych, recenzowanych prac naukowych, które ukształtowały współczesne rozumienie roli AI w zdrowiu psychicznym.</p>
+                </div>
+
+                <div class="tab-container reveal">
+                    <!-- Tab buttons -->
+                    <ul class="tabs" role="tablist">
+                        <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="pane-diag" data-tab="pane-diag">Diagnozowanie</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-therapy" data-tab="pane-therapy">Terapia i interwencje</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-pl" data-tab="pane-pl">Polskie uczelnie i projekty</button></li>
+                    </ul>
+
+                    <!-- Pane 1: Diagnozowanie -->
+                    <div class="tab-pane active" id="pane-diag" role="tabpanel" aria-label="Badania nad Diagnozowaniem">
+                        <div class="research-grid">
+                            
+                            <!-- Accordion Card 1 -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>AI-assisted diagnostic tools in psychiatry</h3>
+                                            <span class="badge badge-diag">Diagnozowanie</span>
+                                        </div>
+                                        <div class="study-meta">Rajpurkar et al. | Nature Medicine, 2022</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Narzędzia diagnostyczne wspomagane sztuczną inteligencją w psychiatrii</em></p>
+                                        <p>Kompleksowy przegląd potencjału klinicznego uczenia maszynowego w analizie obrazowej mózgu, biomarkerów genetycznych oraz mowy pacjentów. Praca podkreśla, że algorytmy AI wykazują wysoką czułość w wykrywaniu wczesnych stadiów zaburzeń schizofrenicznych i afektywnych, jednak ich powszechne wdrożenie wymaga standaryzacji zbiorów danych i eliminacji uprzedzeń (bias).</p>
+                                        <p class="study-summary"><strong>Metodologia:</strong> narracyjny przegląd zastosowań AI w medycynie, obejmujący obrazowanie, dane kliniczne, biomarkery i modele predykcyjne.</p>
+                                        <p class="study-summary"><strong>Główne wnioski:</strong> AI może wzmacniać decyzje kliniczne, ale wymaga zewnętrznej walidacji, przejrzystości danych i nadzoru specjalisty.</p>
+                                        <a href="https://doi.org/10.1038/s41591-021-01614-0" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (DOI: 10.1038/s41591-021-01614-0)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 2 -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Automated voice analysis in depression</h3>
+                                            <span class="badge badge-diag">Diagnozowanie</span>
+                                        </div>
+                                        <div class="study-meta">Low et al. | Clinical Psychological Science, 2020</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Automatyczna analiza głosu w wykrywaniu depresji i przewidywaniu ryzyka samobójczego</em></p>
+                                        <p>Badanie oceniające akustyczne i językowe markery mowy u pacjentów ze zdiagnozowaną depresją kliniczną. Algorytm sztucznej inteligencji wykazał zdolność do precyzyjnego klasyfikowania poziomu nasilenia objawów klinicznych, monitorując subtelne zmiany w tempie mowy, tonacji oraz doborze słownictwa zachodzące między sesjami psychoterapeutycznymi.</p>
+                                        <p class="study-summary"><strong>Metodologia:</strong> przegląd i metaanaliza badań wykorzystujących cechy akustyczne, językowe oraz modele ML do rozpoznawania depresji i ryzyka samobójczego.</p>
+                                        <p class="study-summary"><strong>Główne wnioski:</strong> analiza mowy jest obiecująca jako screening i monitoring, lecz nie zastępuje wywiadu klinicznego ani oceny ryzyka przez człowieka.</p>
+                                        <a href="https://doi.org/10.1177/2167702620951523" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (DOI: 10.1177/2167702620951523)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 2b (Added in 2026) -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>AI Models for Depressive Disorder Detection and Diagnosis</h3>
+                                            <span class="badge badge-diag">Diagnozowanie</span>
+                                        </div>
+                                        <div class="study-meta">Zhao et al. | arXiv Preprints, 2025</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Modele sztucznej inteligencji w wykrywaniu i diagnozowaniu epizodów depresyjnych: Przegląd metod</em></p>
+                                        <p>Przeglądowa praca naukowa oceniająca najnowsze modele głębokiego uczenia maszynowego analizujące zachowania pacjentów. Autorzy analizują systemy diagnozy oparte na analizie ekspresji mimicznej, tonie głosu oraz lingwistycznych znacznikach depresji w tekście. Zwrócono uwagę na wysoką skuteczność detekcji w warunkach laboratoryjnych, lecz także na znaczną podatność modeli na szum informacyjny, brak zewnętrznej walidacji klinicznej oraz trudności w uogólnianiu wyników na pacjentów o różnym pochodzeniu etnicznym czy kulturowym.</p>
+                                        <p class="study-summary"><strong>Metodologia:</strong> przegląd 55 badań uporządkowanych według zadania klinicznego, modalności danych i klasy modelu.</p>
+                                        <p class="study-summary"><strong>Główne wnioski:</strong> najlepsze wyniki dają podejścia multimodalne, ale pole nadal cierpi na małe próby, brak replikacji i ograniczoną interpretowalność.</p>
+                                        <a href="https://arxiv.org/abs/2508.12022" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (arXiv:2508.12022)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Pane 2: Terapia i interwencje -->
+                    <div class="tab-pane" id="pane-therapy" role="tabpanel" aria-label="Badania nad Terapią">
+                        <div class="research-grid">
+                            
+                            <!-- Accordion Card 3 -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Woebot for depression</h3>
+                                            <span class="badge badge-therapy">Terapia</span>
+                                        </div>
+                                        <div class="study-meta">Fitzpatrick et al. | JMIR Mental Health, 2017</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Dostarczanie terapii poznawczo-behawioralnej młodym dorosłym z objawami depresji i lęku przy użyciu w pełni zautomatyzowanego agenta konwersacyjnego (Woebot)</em></p>
+                                        <p>Randomizowane badanie kontrolowane (RCT) oceniające skuteczność bota konwersacyjnego opartego na CBT. Wyniki wykazały statystycznie istotną redukcję objawów depresyjnych w grupie korzystającej z Woebota przez okres 2 tygodni w porównaniu z grupą kontrolną (korzystającą z e-booka psychoedukacyjnego). Uczestnicy chwalili wysoką dostępność i empatyczny ton chatbota.</p>
+                                        <p class="study-summary"><strong>Metodologia:</strong> dwutygodniowe randomizowane badanie kontrolowane wśród młodych dorosłych z objawami depresji i lęku.</p>
+                                        <p class="study-summary"><strong>Główne wnioski:</strong> chatbot CBT może krótkoterminowo obniżać objawy depresji, szczególnie jako narzędzie psychoedukacyjne i wsparcie między sesjami.</p>
+                                        <a href="https://doi.org/10.2196/mental.7785" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (DOI: 10.2196/mental.7785)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 4 -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Large language models in psychotherapy</h3>
+                                            <span class="badge badge-therapy">Terapia</span>
+                                        </div>
+                                        <div class="study-meta">Stade et al. | NEJM AI, 2024</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Wielkie modele językowe w psychoterapii: kluczowe pytania</em></p>
+                                        <p>Przełomowa publikacja proponująca **ramy READI** (Readiness Evaluation) dla wdrażania modeli LLM w opiece behawioralnej. Autorzy analizują dynamiczne relacje terapeutyczne, zwracając uwagę na krytyczne znaczenie przeciwdziałania fałszywym rekomendacjom klinicznym oraz na ryzyko spłycenia głębokiej ludzkiej empatii przez sztucznie generowane komunikaty.</p>
+                                        <a href="https://doi.org/10.1056/AIp2400032" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (DOI: 10.1056/AIp2400032)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 4a -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>AI-Powered CBT Chatbots: A Systematic Review</h3>
+                                            <span class="badge badge-therapy">Terapia</span>
+                                        </div>
+                                        <div class="study-meta">Bendig et al. | Journal of Medical Internet Research, 2025</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Chatboty oparte na terapii poznawczo-behawioralnej zasilane sztuczną inteligencją: Przegląd systematyczny</em></p>
+                                        <p>Systematyczny przegląd randomizowanych badań kontrolowanych (RCT) oceniających aplikacje terapeutyczne (np. Woebot, Wysa). Wyniki potwierdzają, że chatboty wykorzystujące techniki CBT i uważności wykazują statystycznie istotną, małą do umiarkowanej skuteczność w redukcji objawów lękowych i depresyjnych u pacjentów o łagodnym nasileniu. Badanie punktuje jednak kluczowe wyzwania: bardzo wysoki odsetek przedwczesnego porzucania interakcji przez użytkowników (attrition rate) wynikający z braku ludzkiej relacji terapeutycznej oraz niską skuteczność w radzeniu sobie z ostrymi kryzysami psychicznymi.</p>
+                                        <p class="study-summary"><strong>Metodologia:</strong> przegląd systematyczny baz PubMed, Embase, MEDLINE, CENTRAL, CINAHL, PsycINFO i Google Scholar dotyczący chatbotów CBT.</p>
+                                        <p class="study-summary"><strong>Główne wnioski:</strong> efekty są najbardziej wiarygodne przy łagodnych i umiarkowanych objawach; brakuje mocnych danych o skuteczności długoterminowej i pracy z kryzysem.</p>
+                                        <a href="https://pubmed.ncbi.nlm.nih.gov/40093525/" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (PubMed ID: 40093525)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 4b -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Seeking Support From Generative AI: ChatGPT User Experiences</h3>
+                                            <span class="badge badge-therapy">Terapia</span>
+                                        </div>
+                                        <div class="study-meta">Luo et al. | JMIR Mental Health, 2025</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Poszukiwanie wsparcia emocjonalnego i psychicznego w generatywnej AI: Mieszane badanie doświadczeń użytkowników ChatGPT</em></p>
+                                        <p>Praca analizująca doświadczenia 270 użytkowników z 29 krajów, którzy regularnie korzystają z ChatGPT do wsparcia emocjonalnego. Aż 73% uczestników oceniło ChatGPT jako pomocny lub bardzo pomocny w codziennej redukcji stresu, radzeniu sobie z samotnością oraz psychoedukacji. Jako kluczowe zalety wskazano natychmiastową dostępność, brak poczucia stygmatyzacji oraz cierpliwy ton wypowiedzi. Z drugiej strony, użytkownicy zwracali uwagę na powierzchowność interakcji, brak spersonalizowanego zrozumienia szerszego kontekstu życiowego oraz obawy o prywatność przekazywanych danych poufnych.</p>
+                                        <p class="study-summary"><strong>Metodologia:</strong> badanie mieszane łączące ankietę międzynarodową z analizą jakościową doświadczeń osób używających ChatGPT do wsparcia psychicznego.</p>
+                                        <p class="study-summary"><strong>Główne wnioski:</strong> użytkownicy cenią dostępność i brak oceny, ale zgłaszają obawy dotyczące prywatności, powierzchowności odpowiedzi i braku realnej odpowiedzialności klinicznej.</p>
+                                        <a href="https://pubmed.ncbi.nlm.nih.gov/41313214/" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (PubMed ID: 41313214)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 4c -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Spontaneous use of ChatGPT for mental health support</h3>
+                                            <span class="badge badge-therapy">Terapia</span>
+                                        </div>
+                                        <div class="study-meta">Diaz & Huguet | Journal of Public Health, 2025</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Spontaniczne korzystanie z ChatGPT w celu wsparcia zdrowia psychicznego: Badanie eksploracyjne</em></p>
+                                        <p>Eksploracyjne badanie sprawdzające, jak często internauci nieformalnie używają publicznego ChatGPT jako pomocy psychologicznej. Ustalono, że spośród osób korzystających z modelu ogólnego, 17,2% przynajmniej raz skonsultowało go w sprawach dobrostanu psychicznego. Wykazano ogromny rozdźwięk demograficzny: z technologii tej korzysta aż 39,5% adolescentów i młodych dorosłych, podczas gdy w kohorcie osób w wieku 50–64 lata odsetek ten wynosi zaledwie 3,6%. Autorzy podkreślają potrzebę edukacji młodzieży w zakresie ograniczeń medycznych modeli językowych.</p>
+                                        <a href="https://doi.org/10.1007/s10389-025-02668-x" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (Springer Link)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 4d -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>AI chatbots versus humans: meta-analysis of empathy</h3>
+                                            <span class="badge badge-therapy">Terapia</span>
+                                        </div>
+                                        <div class="study-meta">Milne et al. | arXiv Preprints, 2026</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Chatboty AI kontra ludzki personel medyczny: Przegląd systematyczny i metaanaliza empatii w opiece nad pacjentem</em></p>
+                                        <p>Kompleksowa metaanaliza oceniająca percepcję empatii modeli AI w porównaniu do ludzi. Choć w tekstowych ankietach chatboty często otrzymują bardzo wysokie oceny empatii (przewyższające niekiedy zmęczonych lekarzy czy terapeutów dzięki ustrukturyzowanej, uprzejmej formie i braku oznak zniecierpliwienia), praca dowodzi, że jest to zjawisko powierzchowne. Prawdziwa empatia kliniczna opiera się na wspólnym rozumieniu kontekstu, którego maszyna nie posiada, a bezkrytyczne poleganie na wirtualnej „empatii” może prowadzić do emocjonalnego uzależnienia i spłycenia relacji międzyludzkich.</p>
+                                        <a href="https://arxiv.org/abs/2602.05628" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (arXiv:2602.05628)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 4e -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Mind launches inquiry into AI after Guardian investigation</h3>
+                                            <span class="badge badge-therapy">Terapia</span>
+                                        </div>
+                                        <div class="study-meta">The Guardian | Investigation Report, 2026</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Polski tytuł:</strong> <em>Mind wszczyna dochodzenie w sprawie AI i zdrowia psychicznego po śledztwie The Guardian</em></p>
+                                        <p>Raport opisujący działania wiodącej brytyjskiej organizacji ds. zdrowia psychicznego Mind, która powołała komitet badawczy po doniesieniach o podawaniu przez algorytmy wyszukiwarek (np. Google AI Overviews) niebezpiecznych i mylących rekomendacji medycznych użytkownikom szukającym wsparcia w kryzysie samobójczym. Dochodzenie ma na celu wywarcie nacisku na korporacje technologiczne w celu wdrożenia bezwzględnych filtrów bezpieczeństwa i priorytetyzacji oficjalnych, zweryfikowanych infolinii kryzysowych.</p>
+                                        <a href="https://www.theguardian.com/technology/2026/feb/20/mind-inquiry-google-ai-overviews-mental-health-guardian-investigation" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz artykuł w The Guardian (2026)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Pane 3: Polskie projekty -->
+                    <div class="tab-pane" id="pane-pl" role="tabpanel" aria-label="Polskie projekty">
+                        <div class="research-grid">
+                            
+                            <!-- Accordion Card 5 -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>MoodMon – polska aplikacja mobilna z AI</h3>
+                                            <span class="badge badge-polska">Polska</span>
+                                        </div>
+                                        <div class="study-meta">Sokół-Szawłowska | Psychiatria Polska, 2025</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Oryginalny tytuł:</strong> <em>MoodMon – pierwsza polska aplikacja używająca AI w chorobie afektywnej dwubiegunowej i zaburzeniach depresyjnych nawracających. Wstępna ocena z perspektywy pacjentów</em></p>
+                                        <p>Praca prezentująca wyniki pilotażowego wdrożenia systemu MoodMon. Aplikacja wykorzystuje algorytmy uczenia maszynowego do ciągłego monitorowania mowy pacjentów (parametry fizyczne głosu) oraz poziomów aktywności (krokomierz) w celu przewidywania faz epizodów maniakalnych i depresyjnych. Wyniki wskazują na wysokie subiektywne poczucie bezpieczeństwa i przydatności narzędzia u pacjentów.</p>
+                                        <a href="https://doi.org/10.12740/PP/OnlineFirst/174932" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (Link zewnętrzny)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 6 -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Robot PARO w terapii dzieci</h3>
+                                            <span class="badge badge-polska">Polska</span>
+                                        </div>
+                                        <div class="study-meta">Kałwa et al. | Psychiatria Polska, 2025</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Oryginalny tytuł:</strong> <em>Czy sztuczna inteligencja (robot PARO) może być przydatna w terapii dzieci hospitalizowanych w ostrym oddziale psychiatrycznym</em></p>
+                                        <p>Pilotażowe badanie obserwacyjne przeprowadzone na polskim oddziale klinicznym. Praca ocenia wpływ interakcji z robotem terapeutycznym PARO (stymulującym kontakt za pomocą algorytmów reaktywnych) na stan emocjonalny dzieci z nasilonymi epizodami autoagresji i tendencji samobójczych. Interakcje te przejściowo wyciszały pobudzenie psychoruchowe i stymulowały pozytywny afekt.</p>
+                                        <a href="https://doi.org/10.12740/PP/OnlineFirst/182740" target="_blank" rel="noopener" class="study-link">
+                                            Zobacz publikację (Link zewnętrzny)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Card 7 -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Psychology & AI Research (PAIR) UW</h3>
+                                            <span class="badge badge-polska">Polska</span>
+                                        </div>
+                                        <div class="study-meta">Koło Naukowe | Uniwersytet Warszawski, 2026</div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p><strong>Oryginalny tytuł:</strong> <em>Badania nad akceptacją i etyką chatbotów terapeutycznych w Polsce</em></p>
+                                        <p>Inicjatywa naukowa zrzeszająca badaczy i studentów Wydziału Psychologii UW oraz Kognitywistyki. Zespół analizuje polskie ramy prawne wdrażania narzędzi cyfrowych w ochronie zdrowia psychicznego, prowadzi projekty badawcze oceniające gotowość pacjentów do dzielenia się danymi intymnymi z modelami LLM oraz organizuje ogólnokrajowe konferencje na styku neuronauki i AI.</p>
+                                        <a href="https://psych.uw.edu.pl/" target="_blank" rel="noopener" class="study-link">
+                                            Strona Wydziału Psychologii UW (Weryfikacja działalności)
+                                            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- DODAJ NOWE BADANIE POLSKA TUTAJ -->
+
+                        </div>
+                    </div>
+
+                    <div class="evidence-brief reveal">
+                        <h3>Przegląd najnowszych wniosków z literatury</h3>
+                        <div class="evidence-grid">
+                            <article class="evidence-card">
+                                <h4>The application of artificial intelligence in the field of mental health</h4>
+                                <p><strong>Metodologia:</strong> przegląd systematyczny literatury dotyczącej zastosowań AI w zdrowiu psychicznym.</p>
+                                <p><strong>Wnioski:</strong> najczęstsze zastosowania to screening, monitorowanie objawów, predykcja ryzyka i wsparcie decyzji; autorzy podkreślają problemy jakości danych, biasu, prywatności i konieczności walidacji klinicznej.</p>
+                                <a href="https://doi.org/10.1186/s12888-025-06483-2" target="_blank" rel="noopener">BMC Psychiatry</a>
+                            </article>
+                            <article class="evidence-card">
+                                <h4>Use of generative AI in psychiatry and mental health care</h4>
+                                <p><strong>Metodologia:</strong> przegląd systematyczny 40 badań nad użyciem generatywnej AI w psychiatrii i opiece psychicznej.</p>
+                                <p><strong>Wnioski:</strong> potencjał obejmuje psychoedukację, wsparcie klinicystów i symulacje, ale prace są heterogeniczne i wymagają standardów raportowania, oceny bezpieczeństwa oraz kontroli etyczno-prawnej.</p>
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/39523628/" target="_blank" rel="noopener">PubMed</a>
+                            </article>
+                            <article class="evidence-card">
+                                <h4>AI-powered CBT chatbots</h4>
+                                <p><strong>Metodologia:</strong> przegląd systematyczny badań nad chatbotami CBT, m.in. Woebot, Wysa i Youper.</p>
+                                <p><strong>Wnioski:</strong> narzędzia mogą zmniejszać objawy lęku i depresji przy łagodnym nasileniu, lecz dowody są krótkoterminowe, a utrzymanie zaangażowania użytkowników pozostaje ograniczeniem.</p>
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/40093525/" target="_blank" rel="noopener">PubMed</a>
+                            </article>
+                            <article class="evidence-card">
+                                <h4>Community and professionals survey</h4>
+                                <p><strong>Metodologia:</strong> ankieta społeczności i profesjonalistów zdrowia psychicznego dotycząca korzystania z AI w opiece.</p>
+                                <p><strong>Wnioski:</strong> respondenci widzą korzyści w dostępności i efektywności, ale profesjonaliści częściej wskazują ryzyka kliniczne, prywatnościowe i potrzebę jasnych standardów.</p>
+                                <a href="https://mental.jmir.org/2024/1/e60589" target="_blank" rel="noopener">JMIR Mental Health</a>
+                            </article>
+                            <article class="evidence-card">
+                                <h4>Wysa: real-world mixed-methods evaluation</h4>
+                                <p><strong>Metodologia:</strong> analiza danych rzeczywistego użycia aplikacji oraz ocena jakościowa doświadczeń użytkowników.</p>
+                                <p><strong>Wnioski:</strong> wyniki sugerują obiecujące zaangażowanie i samopomoc w objawach depresyjnych, ale projekt nie dowodzi równoważności z psychoterapią prowadzoną przez człowieka.</p>
+                                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6286427/" target="_blank" rel="noopener">PMC</a>
+                            </article>
+                            <article class="evidence-card">
+                                <h4>WHO: AI in mental health research</h4>
+                                <p><strong>Metodologia:</strong> analiza WHO/Europe dotycząca zastosowań i wyzwań AI w badaniach nad zdrowiem psychicznym.</p>
+                                <p><strong>Wnioski:</strong> WHO wskazuje potencjał AI w rozpoznawaniu potrzeb i trendów, ale ostrzega przed lukami jakościowymi, nierównościami i brakiem przejrzystej oceny modeli.</p>
+                                <a href="https://www.who.int/europe/news/item/06-02-2023-artificial-intelligence-in-mental-health-research--new-who-study-on-applications-and-challenges" target="_blank" rel="noopener">WHO Europe</a>
+                            </article>
+                        </div>
+                    </div>
+
+                    <p class="research-note reveal">Wpisy weryfikowane na podstawie recenzowanych publikacji naukowych w renomowanych bazach (Scopus, PubMed, Web of Science).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: STATYSTYKI -->
+        <section id="statistics" aria-labelledby="statistics-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="statistics-heading">Rzetelne statystyki i dynamika rynku</h2>
+                    <p>Wizualizacja zweryfikowanych danych liczbowych opisujących percepcję społeczną, skalę adopcji technologii oraz czynniki motywujące użytkowników.</p>
+                </div>
+
+                <!-- Numerical Counters Grid -->
+                <div class="counters-grid reveal">
+                    <div class="counter-card">
+                        <div class="counter-number" data-target=">80%">0%</div>
+                        <div class="counter-label">Młodzi dorośli (25–34)</div>
+                        <p class="counter-label-desc" style="font-size:0.85rem; margin-top:0.25rem;">korzystający z narzędzi AI do codziennego wsparcia dobrostanu psychicznego.</p>
+                        <div class="counter-source">Źródło: George Mason University, 2025</div>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-number" data-target="+700%">0%</div>
+                        <div class="counter-label">Dynamika wzrostu aplikacji</div>
+                        <p class="counter-label-desc" style="font-size:0.85rem; margin-top:0.25rem;">liczby aktywnych wirtualnych towarzyszy typu AI-companion w latach 2022–2025.</p>
+                        <div class="counter-source">Źródło: Bipartisan Policy Center, 2025</div>
+                    </div>
+                    <div class="counter-card">
+                        <div class="counter-number" data-target="48.7%">0%</div>
+                        <div class="counter-label">Wspomaganie terapii</div>
+                        <p class="counter-label-desc" style="font-size:0.85rem; margin-top:0.25rem;">osób z diagnozą kliniczną stosujących generatywne modele LLM pomocniczo.</p>
+                        <div class="counter-source">Źródło: Sentio / Practice Innovations, 2025</div>
+                    </div>
+                </div>
+
+                <div class="tab-container reveal">
+                    <!-- Tab Buttons for Charts -->
+                    <ul class="tabs" role="tablist">
+                        <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="pane-chart-scale" data-tab="pane-chart-scale">Skala użytkowania</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-chart-demo" data-tab="pane-chart-demo">Demografia i młodzież</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-chart-reasons" data-tab="pane-chart-reasons">Powody korzystania</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-chart-features" data-tab="pane-chart-features">Atrakcyjność cech</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-chart-professionals" data-tab="pane-chart-professionals">AI w gabinetach specjalistów</button></li>
+                    </ul>
+
+                    <!-- Tab content: Skala użytkowania -->
+                    <div class="tab-pane active" id="pane-chart-scale" role="tabpanel" aria-label="Skala Użytkowania">
+                        <div class="charts-wrapper">
+                            
+                            <!-- Chart Card 1: Donut -->
+                            <div class="chart-card">
+                                <h3>Udział osób z problemami psychicznymi używających LLM terapeutycznie</h3>
+                                <div class="chart-container">
+                                    <svg class="svg-chart-donut" viewBox="0 0 100 100" aria-label="Wykres kołowy: 48.7% pacjentów korzysta z LLM">
+                                        <circle class="donut-bg" cx="50" cy="50" r="30" />
+                                        <!-- Stroke dasharray is 2 * PI * r = ~188.4. For 48.7% value: 48.7% * 188.4 = 91.75. Dashoffset = 188.4 - 91.75 = 96.65 -->
+                                        <circle class="donut-segment" cx="50" cy="50" r="30" stroke="var(--color-primary)" data-dashoffset="96.65" stroke-dasharray="188.4" stroke-dashoffset="188.4" />
+                                        <text x="50" y="55" class="donut-label-center" text-anchor="middle" transform="rotate(90 50 50)">48.7%</text>
+                                    </svg>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-scale" data-citation="cit-scale">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-scale">
+                                    <div class="citation-box-inner">
+                                        <strong>Metodologia badania:</strong> Badanie ankietowe przeprowadzone na reprezentatywnej próbie pacjentów korzystających z platform e-mental health. Sentio Solutions / Practice Innovations, 2025. Dowiedz się więcej: <a href="https://www.sentio.org/" target="_blank" rel="noopener">Sentio Research Group</a>.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chart Card 2: Bar -->
+                            <div class="chart-card">
+                                <h3>Wzrost popularności wirtualnych relacji z AI (BPC, 2025)</h3>
+                                <div class="chart-container">
+                                    <div class="css-bar-chart" aria-label="Wykres słupkowy wzrostu popularności aplikacji AI-companion">
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Rok 2022 (Baza początkowa)</span>
+                                                <span>100%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner sec" data-width="12.5%"></div></div>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Rok 2025 (Wzrost wolumenu)</span>
+                                                <span>800% (Wzrost +700%)</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner" data-width="100%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-bpc" data-citation="cit-bpc">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-bpc">
+                                    <div class="citation-box-inner">
+                                        <strong>Pełne źródło:</strong> Bipartisan Policy Center (2025). <em>The Rise of AI Companions and Digital Relationships: Public Policy & Health Implications</em>. BPC Tech Project. Zobacz raport: <a href="https://bipartisanpolicy.org/report/ai-companions/" target="_blank" rel="noopener">Bipartisan Policy Center Report</a>.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Tab content: Demografia -->
+                    <div class="tab-pane" id="pane-chart-demo" role="tabpanel" aria-label="Demografia i Młodzież">
+                        <div class="charts-wrapper">
+                            
+                            <!-- Chart Card 3: Bar -->
+                            <div class="chart-card">
+                                <h3>Stosowanie chatbotów doradczych i modeli LLM przez młodzież</h3>
+                                <div class="chart-container">
+                                    <div class="css-bar-chart" aria-label="Stosowanie chatbotów przez młodzież">
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Nastolatki 12–21 (Chatboty doradcze)</span>
+                                                <span>12.5% (~1 na 8)</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner" data-width="62.5%"></div></div>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Młodzi dorośli 18–21 (Szerokie modele LLM)</span>
+                                                <span>20.0% (~1 na 5)</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner sec" data-width="100%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-rand" data-citation="cit-rand">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-rand">
+                                    <div class="citation-box-inner">
+                                        <strong>Pełny raport:</strong> RAND Corporation (2025). <em>Chatbots and Large Language Models for Youth Mental Health: Scope, Usage, and Clinical Considerations</em>. RAND Health Care. Pobierz raport: <a href="https://www.rand.org/pubs/research_reports/RRA3032-1.html" target="_blank" rel="noopener">RAND Publications</a>.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chart Card 4: Donut -->
+                            <div class="chart-card">
+                                <h3>Młodzi dorośli 25-34 korzystający ze wsparcia AI (GMU, 2025)</h3>
+                                <div class="chart-container">
+                                    <svg class="svg-chart-donut" viewBox="0 0 100 100" aria-label="Wykres kołowy: ponad 80% młodych dorosłych używa AI do wsparcia dobrostanu">
+                                        <circle class="donut-bg" cx="50" cy="50" r="30" />
+                                        <!-- Stroke dasharray is 188.4. For 80% value: 80% * 188.4 = 150.72. Dashoffset = 188.4 - 150.72 = 37.68 -->
+                                        <circle class="donut-segment" cx="50" cy="50" r="30" stroke="var(--color-secondary)" data-dashoffset="37.68" stroke-dasharray="188.4" stroke-dashoffset="188.4" />
+                                        <text x="50" y="55" class="donut-label-center" text-anchor="middle" transform="rotate(90 50 50)">>80%</text>
+                                    </svg>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-gmu" data-citation="cit-gmu">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-gmu">
+                                    <div class="citation-box-inner">
+                                        <strong>Metodologia:</strong> George Mason University (2025). Ogólnokrajowy sondaż internetowy na grupie kohortowej studentów i młodych profesjonalistów. Zobacz witrynę wydziału: <a href="https://www.gmu.edu/" target="_blank" rel="noopener">GMU Psychology</a>.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chart Card 4b: Internauci a LLM -->
+                            <div class="chart-card" style="grid-column: 1 / -1;">
+                                <h3>Struktura demograficzna internautów szukających pomocy w AI</h3>
+                                <p style="font-size:0.95rem; color:var(--color-text-muted); line-height:1.7; margin-bottom:1.5rem;">
+                                    Spontaniczne korzystanie z modeli językowych (np. ChatGPT) w celu redukcji napięcia i wsparcia psychicznego wykazuje wyraźną zależność wiekową oraz społeczną:
+                                </p>
+                                <div class="css-bar-chart" aria-label="Wykres demografii korzystania z AI">
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Adolescenci i młodzi dorośli (12–21 lat) korzystający spontanicznie z AI</span>
+                                            <span>39.5%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner" data-width="100%"></div></div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Ogólna populacja internautów (używających ChatGPT do e-wsparcia)</span>
+                                            <span>17.2%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner sec" data-width="43.5%"></div></div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Starsze kohorty wiekowe (starszy wiek produkcyjny 50–64 lata)</span>
+                                            <span>3.6%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner warn" data-width="9.1%"></div></div>
+                                    </div>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-demo-users" data-citation="cit-demo-users" style="margin-top:1.5rem;">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-demo-users">
+                                    <div class="citation-box-inner">
+                                        <strong>Źródła danych:</strong>
+                                        <ul style="margin-left: 1.5rem; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; list-style-type: decimal;">
+                                            <li>Diaz, L., & Huguet, A. (2025). Spontaneous use of ChatGPT for mental health support: an exploratory study. <em>Journal of Public Health</em>. Zobacz badanie: <a href="https://doi.org/10.1007/s10389-025-02668-x" target="_blank" rel="noopener">Journal of Public Health Link</a>.</li>
+                                            <li>Luo, X., et al. (2025). Seeking Emotional and Mental Health Support From Generative AI: Mixed-Methods Study of ChatGPT User Experiences. <em>JMIR Mental Health</em>. Szczegóły: <a href="https://pubmed.ncbi.nlm.nih.gov/41313214/" target="_blank" rel="noopener">PubMed Link</a>.</li>
+                                            <li>Badanie ankietowe społeczności (Australia, 2024): 28% ogółu społeczności stosuje narzędzia AI do poprawy samopoczucia. Raport JMIR: <a href="https://mental.jmir.org/2024/1/e60589" target="_blank" rel="noopener">JMIR Survey Link</a>.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Tab content: Powody korzystania -->
+                    <div class="tab-pane" id="pane-chart-reasons" role="tabpanel" aria-label="Powody Korzystania">
+                        <div class="charts-wrapper">
+                            
+                            <!-- Chart Card 5: Bar -->
+                            <div class="chart-card">
+                                <h3>Dlaczego pacjenci wybierają pomoc sztucznej inteligencji?</h3>
+                                <div class="chart-container">
+                                    <div class="css-bar-chart" aria-label="Powody wyboru AI zamiast terapeuty">
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Strach przed oceną i stygmatyzacją</span>
+                                                <span>35.25%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner" data-width="100%"></div></div>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Koszty klasycznej psychoterapii</span>
+                                                <span>32.00%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner sec" data-width="90.7%"></div></div>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Długi czas oczekiwania na wizytę</span>
+                                                <span>22.50%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner warn" data-width="63.8%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-fx" data-citation="cit-fx">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-fx">
+                                    <div class="citation-box-inner">
+                                        <strong>Pełne źródło:</strong> Cognitive FX (2025). <em>Alternative Self-Help Modalities & Stigma Reductions in Modern Psychotherapy</em>. Cognitive Neuroscience Reports.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image/Placeholder or complementary description -->
+                            <div class="chart-card" style="justify-content:center;">
+                                <h3 style="border:none; padding-bottom:0;">Wnioski z analizy barier</h3>
+                                <p style="font-size:0.95rem; line-height:1.7; margin-bottom:0; color:var(--color-text-muted);">
+                                    Dane wyraźnie pokazują, że korzystanie ze sztucznej inteligencji nie zawsze wynika z fascynacji technologią, lecz z **barier strukturalnych** systemu ochrony zdrowia. Wysokie koszty sesji prywatnych, brak refundowanych miejsc u specjalistów oraz głęboko zakorzeniony lęk przed stygmatyzacją społeczną (strach przed przyznaniem się do problemu twarzą w twarz) spychają pacjentów na drogi samopomocy cyfrowej.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Tab content: Ocena skuteczności / Atrakcyjne cechy -->
+                    <div class="tab-pane" id="pane-chart-features" role="tabpanel" aria-label="Atrakcyjność Cech">
+                        <div class="charts-wrapper">
+                            
+                            <!-- Chart Card 6: Bar -->
+                            <div class="chart-card">
+                                <h3>Kluczowe zalety AI w opinii użytkowników aplikacji pomocowych</h3>
+                                <div class="chart-container">
+                                    <div class="css-bar-chart" aria-label="Główne zalety w opinii użytkowników">
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Dostępność 24/7 (całodobowa pomoc)</span>
+                                                <span>50.0%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner" data-width="100%"></div></div>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Prywatność, anonimowość i brak kontroli lekarskiej</span>
+                                                <span>41.0%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner sec" data-width="82.0%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-yougov" data-citation="cit-yougov">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-yougov">
+                                    <div class="citation-box-inner">
+                                        <strong>Raport źródłowy:</strong> YouGov / Statista Consumer Insights (2024). <em>Public Perception of AI-powered Mental Health Applications</em>. Zobacz witrynę: <a href="https://yougov.com" target="_blank" rel="noopener">YouGov Consumer Reports</a>.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Custom aesthetic donut chart -->
+                            <div class="chart-card">
+                                <h3>Stosunek do pełnego zastąpienia lekarza przez cyfrowego asystenta</h3>
+                                <div class="chart-container">
+                                    <svg class="svg-chart-donut" viewBox="0 0 100 100" aria-label="Tylko 12% ankietowanych w pełni ufa AI w diagnozie bez udziału lekarza">
+                                        <circle class="donut-bg" cx="50" cy="50" r="30" />
+                                        <!-- For 12% value: 12% * 188.4 = 22.61. Dashoffset = 188.4 - 22.61 = 165.79 -->
+                                        <circle class="donut-segment" cx="50" cy="50" r="30" stroke="var(--color-warning)" data-dashoffset="165.79" stroke-dasharray="188.4" stroke-dashoffset="188.4" />
+                                        <text x="50" y="55" class="donut-label-center" text-anchor="middle" transform="rotate(90 50 50)">12.0%</text>
+                                    </svg>
+                                </div>
+                                <p style="font-size:0.825rem; text-align:center; color:var(--color-text-muted); margin-top:-0.5rem; margin-bottom: 1.5rem;">
+                                    Odsetek pacjentów skłonnych przyjąć diagnozę psychiatryczną wystawioną w 100% samodzielnie przez model AI.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Tab content: Specjaliści i psychiatrzy -->
+                    <div class="tab-pane" id="pane-chart-professionals" role="tabpanel" aria-label="AI w gabinetach specjalistów">
+                        <div class="charts-wrapper">
+                            
+                            <!-- Chart Card A: Donut for Psychologists -->
+                            <div class="chart-card">
+                                <h3>Psycholodzy korzystający z narzędzi AI w swojej praktyce zawodowej</h3>
+                                <div class="chart-container">
+                                    <svg class="svg-chart-donut" viewBox="0 0 100 100" aria-label="Wykres kołowy: 56% psychologów stosuje AI pomocniczo w pracy">
+                                        <circle class="donut-bg" cx="50" cy="50" r="30" />
+                                        <!-- For 56% value: 56% * 188.4 = 105.5. Dashoffset = 188.4 - 105.5 = 82.9 -->
+                                        <circle class="donut-segment" cx="50" cy="50" r="30" stroke="var(--color-primary)" data-dashoffset="82.90" stroke-dasharray="188.4" stroke-dashoffset="188.4" />
+                                        <text x="50" y="55" class="donut-label-center" text-anchor="middle" transform="rotate(90 50 50)">56.0%</text>
+                                    </svg>
+                                </div>
+                                <p style="font-size:0.825rem; text-align:center; color:var(--color-text-muted); margin-top:-0.5rem; margin-bottom: 1.5rem;">
+                                    Odsetek psychologów deklarujących korzystanie z asysty AI przynajmniej raz w roku (wzrost z 29% w 2024 r.).
+                                </p>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-apa-psych" data-citation="cit-apa-psych">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-apa-psych">
+                                    <div class="citation-box-inner">
+                                        <strong>Metodologia badania:</strong> Ogólnokrajowy raport <em>Practitioner Pulse Survey 2025</em> przeprowadzony przez American Psychological Association (APA) na grupie 1742 licencjonowanych psychologów. Liczba osób deklarujących brak kontaktu z AI spadła z 71% w 2024 r. do 44% w 2025 r. Zobacz pełny raport: <a href="https://www.apa.org/news/press/releases/2025/11/practitioner-pulse-survey-ai" target="_blank" rel="noopener">APA News Release</a>.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chart Card B: Bar for Psychiatrists -->
+                            <div class="chart-card">
+                                <h3>Zastosowanie asystentów AI w praktyce psychiatrycznej (APA, 2026)</h3>
+                                <div class="chart-container">
+                                    <div class="css-bar-chart" aria-label="Wykres słupkowy wdrożeń AI w psychiatrii">
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Generowanie notatek i transkrypcja kliniczna</span>
+                                                <span>26.0%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner" data-width="100%"></div></div>
+                                        </div>
+                                        <div class="bar-item">
+                                            <div class="bar-label-row">
+                                                <span>Zadania administracyjne (fakturowanie, e-maile)</span>
+                                                <span>16.0%</span>
+                                            </div>
+                                            <div class="bar-outer"><div class="bar-inner sec" data-width="61.5%"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="citation-toggle-btn" aria-expanded="false" aria-controls="cit-apa-psychiatry" data-citation="cit-apa-psychiatry">
+                                    <span class="citation-toggle-text">Pokaż źródło</span>
+                                    <svg class="citation-chevron" style="width:0.85rem; height:0.85rem; fill:none; stroke:currentColor; stroke-width:2.5; transition: transform 0.2s;" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+                                </button>
+                                <div class="citation-box" id="cit-apa-psychiatry">
+                                    <div class="citation-box-inner">
+                                        <strong>Pełne źródło:</strong> Sondaż przeprowadzony na ponad 2000 czynnych zawodowo członkach American Psychiatric Association na początku 2026 r. Raportuje silny podział środowiska: 40% uważa e-terapię AI za bardziej ryzykowną, a 38% dostrzega szansę na wzrost skuteczności. Odnośnik: <a href="https://www.psychiatry.org/news-room/news-releases/survey-of-apa-members-about-ai-use-in-practice" target="_blank" rel="noopener">Psychiatry.org News Release</a>.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chart Card C: Security Awareness -->
+                            <div class="chart-card" style="grid-column: 1 / -1;">
+                                <h3>Świadomość bezpieczeństwa i główne obawy psychologów (APA, 2025)</h3>
+                                <p style="font-size:0.95rem; color:var(--color-text-muted); line-height:1.7; margin-bottom: 1.5rem;">
+                                    Pomimo rosnącej popularności, aż **92% psychologów wyraża obawy** dotyczące wdrażania AI do ochrony zdrowia psychicznego. Ich głównym źródłem niepokoju są ryzyka związane z bezpieczeństwem informacji, poprawnością diagnostyczną oraz etyką maszynową:
+                                </p>
+                                <div class="css-bar-chart" aria-label="Wykres obaw psychologów odnośnie AI">
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Możliwe wycieki i naruszenia danych wrażliwych RODO/HIPAA</span>
+                                            <span>67.0%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner warn" data-width="100%"></div></div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Nieprzewidziane szkody społeczne i izolacja</span>
+                                            <span>64.0%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner sec" data-width="95.5%"></div></div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Uprzedzenia i stronniczość algorytmów (bias)</span>
+                                            <span>63.0%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner sec" data-width="94.0%"></div></div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Brak rzetelnych testów klinicznych (evidence gap)</span>
+                                            <span>61.0%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner sec" data-width="91.0%"></div></div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-label-row">
+                                            <span>Inwazyjność błędów i halucynacje modeli LLM</span>
+                                            <span>60.0%</span>
+                                        </div>
+                                        <div class="bar-outer"><div class="bar-inner sec" data-width="89.5%"></div></div>
+                                    </div>
+                                </div>
+                                <div style="font-size:0.8rem; color:var(--color-text-muted); margin-top: 1rem; text-align:right;">
+                                    Dane na podstawie <em>APA Practitioner Pulse Survey (2025)</em>.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Stats Disclaimer Box -->
+                <div class="stats-disclaimer reveal">
+                    <p><strong>Ważna uwaga metodologiczna:</strong> Zdecydowana większość cytowanych danych statystycznych pochodzi z badań przeprowadzonych w Stanach Zjednoczonych i Europie Zachodniej. Ze względu na brak analogicznych, szerokich sondaży reprezentatywnych w Polsce, dane krajowe są mocno ograniczone. Stanowi to **wyraźną lukę badawczą**, która uniemożliwia bezpośrednią ekstrapolację wyników na polskie społeczeństwo o odmiennej charakterystyce kulturowo-ekonomicznej.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: ZAGROŻENIA I WSKAZÓWKI -->
+        <section id="risks" aria-labelledby="risks-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="risks-heading">Zagrożenia i wytyczne bezpieczeństwa</h2>
+                    <p>Rzetelna, oparta na faktach analiza słabości technologii oraz zasady, które pozwolą zminimalizować ryzyko podczas korzystania z systemów sztucznej inteligencji.</p>
+                </div>
+
+                <div class="tab-container reveal">
+                    <!-- Tab Buttons for Risks -->
+                    <ul class="tabs" role="tablist">
+                        <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="pane-risk-user" data-tab="pane-risk-user">Dla użytkowników</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-risk-app" data-tab="pane-risk-app">Wiarygodność aplikacji</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-risk-data" data-tab="pane-risk-data">Ochrona danych</button></li>
+                    </ul>
+
+                    <!-- Pane 1: Dla użytkowników -->
+                    <div class="tab-pane active" id="pane-risk-user" role="tabpanel" aria-label="Zagrożenia dla Użytkowników">
+                        <div class="risks-grid">
+                            
+                            <!-- Card 1 -->
+                            <div class="risk-card">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3>Błędy i halucynacje AI</h3>
+                                    <p>Sztuczna inteligencja generuje odpowiedzi pewnym, uspokajającym tonem, niezależnie od tego, czy informacje są prawdziwe. Raport Stanford University (2025) wykazał, że chatboty udzielały w pełni poprawnych medycznie porad w 60% przypadków, podczas gdy wykwalifikowani psychoterapeuci osiągnęli wynik 93%.</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="risk-card">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zM11 7h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3>Efekt pochlebstw (Sycophancy)</h3>
+                                    <p>Wielkie modele językowe są szkolone pod kątem maksymalnej satysfakcji użytkownika. Powoduje to tzw. <em>agreement bias</em> — model ma silną tendencję do potakiwania pacjentowi i bezkrytycznego umacniania go w błędnych, niezdrowych przekonaniach, zamiast konstruktywnego kwestionowania jego zniekształceń poznawczych.</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="risk-card">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3>Ryzyko nadmiernego zaangażowania</h3>
+                                    <p>Generowanie spersonalizowanych, pozbawionych konfliktów wirtualnych relacji z modelami asystenckimi może prowadzić do zastępowania naturalnych, trudniejszych kontaktów międzyludzkich cyfrowym substytutem. Skutkuje to pogłębioną izolacją społeczną i osłabieniem więzi.</p>
+                                </div>
+                            </div>
+
+                            <!-- Special Hotline Emergency Card -->
+                            <div class="risk-card emergency">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3 style="color: var(--color-emergency);">Sytuacje kryzysowe — AI nie zastąpi interwencji!</h3>
+                                    <p style="color: var(--color-text);">Sztuczna inteligencja pod żadnym pozorem nie może być stosowana w stanach zagrożenia życia, ostrego kryzysu psychicznego czy przy myślach samobójczych. Narzędzia cyfrowe nie są w stanie zawiadomić służb ani udzielić profesjonalnej interwencji kryzysowej. Jeśli Ty lub ktoś w Twoim otoczeniu potrzebuje pomocy, natychmiast skontaktuj się pod dedykowanymi, bezpłatnymi numerami zaufania:</p>
+                                    <div class="hotline-numbers">
+                                        <a href="tel:116123" class="hotline-btn" aria-label="Zadzwoń na Telefon Zaufania dla Dorosłych pod numer 116 123">
+                                            <span>Dla Dorosłych:</span> <strong>116 123</strong>
+                                        </a>
+                                        <a href="tel:116111" class="hotline-btn" aria-label="Zadzwoń na Telefon Zaufania dla Dzieci i Młodzieży pod numer 116 111">
+                                            <span>Dzieci i Młodzież:</span> <strong>116 111</strong>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Pane 2: Wiarygodność aplikacji -->
+                    <div class="tab-pane" id="pane-risk-app" role="tabpanel" aria-label="Wiarygodność Aplikacji">
+                        <div class="risks-grid">
+                            
+                            <!-- Card 4 -->
+                            <div class="risk-card">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3>Niewiarygodne aplikacje mobilne</h3>
+                                    <p>Sklepy z aplikacjami są przepełnione produktami określającymi się jako "wsparcie terapeutyczne AI" bez jakichkolwiek certyfikatów medycznych czy badań skuteczności klinicznej. Narzędzia te są nastawione komercyjnie i rzadko opierają się na procedurach *evidence-based medicine*.</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 -->
+                            <div class="risk-card">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3>Brak weryfikacji kompetencji</h3>
+                                    <p>Systemy AI nie przechodzą procedury weryfikacji uprawnień zawodowych, superwizji czy odpowiedzialności dyscyplinarnej. W przypadku wyrządzenia krzywdy pacjentowi, nie istnieje żadna izba lekarska czy psychologiczna, przed którą można dochodzić odpowiedzialności prawnej.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Pane 3: Ochrona danych -->
+                    <div class="tab-pane" id="pane-risk-data" role="tabpanel" aria-label="Ochrona Danych i RODO">
+                        <div class="risks-grid">
+                            
+                            <!-- Card 6 -->
+                            <div class="risk-card">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3>RODO a dostawcy spoza Unii Europejskiej</h3>
+                                    <p>Wiele popularnych chatbotów terapeutycznych jest zarządzanych przez korporacje z siedzibą w USA. Dane dotyczące zdrowia psychicznego wpisywane do konwersacji stanowią tzw. *dane wrażliwe* (art. 9 RODO). Często są one wykorzystywane do douczania modeli (RLHF) bez pełnej anonimizacji, co grozi wyciekiem poufnych informacji.</p>
+                                </div>
+                            </div>
+
+                            <!-- Card 7 -->
+                            <div class="risk-card">
+                                <div class="risk-icon-wrapper">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                </div>
+                                <div class="risk-info">
+                                    <h3>Brak gwarancji poufności sesji</h3>
+                                    <p>W odróżnieniu od psychoterapeuty objętego tajemnicą zawodową gwarantowaną ustawowo, warunki korzystania z aplikacji AI podlegają regulacjom komercyjnym. Operatorzy mogą zmienić politykę prywatności, udostępniać zanonimizowane metadane partnerom reklamowym czy przekazywać je w celach komercyjnych.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Golden Rules Box -->
+                <div class="golden-rules-box reveal" style="margin-top: 4rem;">
+                    <h3>Złote zasady bezpiecznego korzystania z AI w samopomocy</h3>
+                    <ol class="rules-list">
+                        <li>
+                            <span class="rule-num" aria-hidden="true">1</span>
+                            <p><strong>Nigdy nie podawaj danych osobowych</strong> — nie wpisuj do czatów nazwisk, adresów, nazw firm ani żadnych danych, które mogłyby bezpośrednio zidentyfikować Ciebie lub Twoich bliskich.</p>
+                        </li>
+                        <li>
+                            <span class="rule-num" aria-hidden="true">2</span>
+                            <p><strong>Traktuj AI jako interaktywny e-book</strong> — traktuj generowane wypowiedzi jako sugestie i punkt wyjścia do własnych przemyśleń lub dyskusji z terapeutą, a nie jako niepodważalne diagnozy.</p>
+                        </li>
+                        <li>
+                            <span class="rule-num" aria-hidden="true">3</span>
+                            <p><strong>Weryfikuj wiarygodność narzędzi</strong> — korzystaj wyłącznie z aplikacji, które posiadają przejrzyste badania kliniczne skuteczności (np. Woebot, Wysa) i precyzyjnie opisują proces ochrony danych.</p>
+                        </li>
+                        <li>
+                            <span class="rule-num" aria-hidden="true">4</span>
+                            <p><strong>Nie zastępuj człowieka maszyną</strong> — jeśli czujesz, że Twoje samopoczucie stale się pogarsza, umów się na konsultację z licencjonowanym psychoterapeutą, psychologiem lub lekarzem psychiatrą.</p>
+                        </li>
+                        <li>
+                            <span class="rule-num" aria-hidden="true">5</span>
+                            <p><strong>Miej plan awaryjny</strong> — zapisz w łatwo dostępnym miejscu numery alarmowe i adresy lokalnych Ośrodków Interwencji Kryzysowej na wypadek nagłego pogorszenia stanu psychicznego.</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="report-brief reveal">
+                    <h3>Stanowisko instytucjonalne i granice skuteczności</h3>
+                    <p>Aktualny stan wiedzy naukowej wskazuje, że najlepsze dowody dotyczą wsparcia psychoedukacyjnego, monitorowania objawów oraz krótkich interwencji przy łagodnych i umiarkowanych trudnościach. Nie ma natomiast wystarczających danych, by uznać AI za pełnoprawny substytut psychoterapii lub diagnozy prowadzonej przez człowieka.</p>
+                    <ul class="report-points">
+                        <li>WHO rekomenduje model „specjalista + AI”: zachowanie autonomii człowieka, odpowiedzialność kliniczną, przejrzystość, równość i ochronę prywatności.</li>
+                        <li>Najważniejsze ograniczenia to halucynacje, bias danych, brak długoterminowych badań porównawczych i ryzyko nadmiernego zaufania użytkowników.</li>
+                        <li>W sytuacji kryzysu psychicznego narzędzie AI powinno kierować do profesjonalnej pomocy, a nie próbować prowadzić samodzielnej interwencji.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: DLA SPECJALISTÓW -->
+        <section id="specialists" aria-labelledby="specialists-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="specialists-heading">Sekcja dla specjalistów i profesjonalistów</h2>
+                    <p>Informacje dedykowane psychoterapeutom, psychologom i lekarzom psychiatrom, poszukującym standardów integracji narzędzi cyfrowych w swojej praktyce klinicznej.</p>
+                </div>
+
+                <div class="tab-container reveal">
+                    <!-- Tab Buttons for Specialists -->
+                    <ul class="tabs" role="tablist">
+                        <li><button class="tab-btn active" role="tab" aria-selected="true" aria-controls="pane-spec-clinical" data-tab="pane-spec-clinical">Zastosowania kliniczne</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-spec-ethics" data-tab="pane-spec-ethics">Ryzyka etyczne</button></li>
+                        <li><button class="tab-btn" role="tab" aria-selected="false" aria-controls="pane-spec-training" data-tab="pane-spec-training">Szkolenia w Polsce</button></li>
+                    </ul>
+
+                    <!-- Pane 1: Zastosowania kliniczne -->
+                    <div class="tab-pane active" id="pane-spec-clinical" role="tabpanel" aria-label="Zastosowania Kliniczne">
+                        <div class="specialist-cards-grid">
+                            
+                            <!-- Card A -->
+                            <div class="specialist-card">
+                                <div class="specialist-card-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                                </div>
+                                <h3>Dokumentacja kliniczna</h3>
+                                <ul class="specialist-card-list">
+                                    <li>Automatyczne generowanie podsumowań sesji na podstawie zanonimizowanych notatek terapeuty.</li>
+                                    <li>Formatowanie wpisów do kartotek medycznych zgodnych ze strukturą SOAP / BIRP.</li>
+                                    <li>Dane APA wskazują, że najczęstsze realne użycie AI przez psychiatrów dotyczy dziś notatek klinicznych i zadań administracyjnych, a nie samodzielnej terapii.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Card B -->
+                            <div class="specialist-card">
+                                <div class="specialist-card-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                </div>
+                                <h3>Psychoedukacja pacjentów</h3>
+                                <ul class="specialist-card-list">
+                                    <li>Szybkie tworzenie spersonalizowanych arkuszy monitorowania nastroju.</li>
+                                    <li>Generowanie przystępnych, dostosowanych do wieku metafor i wyjaśnień mechanizmów lękowych.</li>
+                                    <li>Wsparcie w opracowywaniu ćwiczeń ekspozycyjnych i technik relaksacyjnych, pod warunkiem zatwierdzenia ich przez specjalistę.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Card C -->
+                            <div class="specialist-card">
+                                <div class="specialist-card-icon">
+                                    <svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                                </div>
+                                <h3>Triaż i screening wstępny</h3>
+                                <ul class="specialist-card-list">
+                                    <li>Przesiewowe formularze diagnostyczne analizowane w czasie rzeczywistym przed pierwszą konsultacją.</li>
+                                    <li>Identyfikacja pacjentów wymagających pilnego kontaktu medycznego na podstawie analizy lingwistycznej.</li>
+                                    <li>Wstępna klasyfikacja potrzeb pacjenta jako materiał pomocniczy; ostateczna diagnoza i decyzje terapeutyczne pozostają po stronie człowieka.</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Pane 2: Ryzyka etyczne -->
+                    <div class="tab-pane" id="pane-spec-ethics" role="tabpanel" aria-label="Ryzyka Etyczne">
+                        <div class="ethics-wrapper">
+                            
+                            <!-- Ethics Accordions -->
+                            <div class="accordion-card">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Granice odpowiedzialności zawodowej</h3>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p>Terapeuta korzystający z systemów wspomagania decyzji klinicznych AI (Clinical Decision Support Systems) ponosi pełną, osobistą odpowiedzialność etyczną i prawną za ostateczną diagnozę oraz kierunek leczenia. Sugestie algorytmów należy traktować wyłącznie pomocniczo, każdorazowo poddając je krytycznej weryfikacji.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card" style="margin-top:1rem;">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Zgoda pacjenta i transparentność</h3>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p>Wszelkie wdrożenia narzędzi cyfrowych mających kontakt z pacjentem (np. zalecenie korzystania z aplikacji monitorującej nastroje w ramach pracy własnej między sesjami) wymagają uzyskania świadomej zgody pacjenta. Pacjent musi zostać w pełni poinformowany o tym, jak aplikacja przechowuje dane oraz jakie algorytmy wpływają na przebieg interakcji.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card" style="margin-top:1rem;">
+                                <div class="accordion-header" role="button" aria-expanded="false" tabindex="0">
+                                    <div class="accordion-header-left">
+                                        <div class="accordion-title-row">
+                                            <h3>Prywatność i anonimizacja danych</h3>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+                                    </div>
+                                </div>
+                                <div class="accordion-content">
+                                    <div class="accordion-content-inner">
+                                        <p>Wprowadzanie jakichkolwiek transkrypcji sesji terapeutycznych, wypowiedzi pacjentów lub szczegółowych opisów przypadków do ogólnodostępnych modeli LLM (np. darmowych wersji ChatGPT, Claude) w celu analizy czy superwizji stanowi rażące naruszenie tajemnicy zawodowej oraz przepisów RODO. Dozwolone jest wyłącznie wprowadzanie danych zanonimizowanych przy użyciu dedykowanych, lokalnych i zabezpieczonych serwerów klinicznych.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Pane 3: Szkolenia w Polsce -->
+                    <div class="tab-pane" id="pane-spec-training" role="tabpanel" aria-label="Szkolenia i Zasoby w Polsce">
+                        <div class="training-table-wrapper">
+                            <table class="training-table">
+                                <thead>
+                                    <tr>
+                                        <th>Nazwa instytucji / wydarzenia</th>
+                                        <th>Zakres i kierunek kształcenia</th>
+                                        <th>Status / Informacje dodatkowe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Polskie Towarzystwo Psychologiczne (PTP)</strong></td>
+                                        <td>Grupa robocza ds. e-Mental Health i standardów etycznych terapii online.</td>
+                                        <td>Prace koncepcyjne nad aktualizacją Kodeksu Etyczno-Zawodowego Psychologa pod kątem technologii cyfrowych.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SWPS Uniwersytet</strong></td>
+                                        <td>Podyplomowe studia z obszaru praktycznych zastosowań e-mental health.</td>
+                                        <td>Programy obejmujące moduły z etyki technologii, teleterapii oraz wykorzystania asystentów cyfrowych w terapii poznawczej.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Konferencja "Psychiatria XXI Wieku"</strong></td>
+                                        <td>Coroczne panele dyskusyjne poświęcone cyfrowej psychiatrii.</td>
+                                        <td>Stały punkt programu dotyczący wdrożeń sztucznej inteligencji, analiz mowy oraz telemedycyny w diagnostyce ambulatoryjnej.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Kongres Polskiego Towarzystwa Psychiatrycznego</strong></td>
+                                        <td>Sympozja na temat telepsychiatrii i etyki algorytmów predykcyjnych.</td>
+                                        <td>Prezentacje najnowszych polskich wdrożeń klinicznych (m.in. systemu MoodMon).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="spec-invite">
+                            <span>Znasz certyfikowane szkolenie, konferencję lub wartościowy zasób dla specjalistów w Polsce? </span>
+                            <button class="btn btn-outline" style="padding: 0.4rem 1rem; font-size: 0.8rem; vertical-align: middle; margin-left: 0.5rem;" type="button">Zgłoś zasób szkoleniowy</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: O PROJEKCIE & METODOLOGIA & BIBLIOGRAPHY -->
+        <section id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="about-heading">O projekcie</h2>
+                    <p>Informacje o genezie powstania serwisu oraz pełna bibliografia w formacie APA 7th.</p>
+                </div>
+
+                <div class="about-grid reveal">
+                    <div class="about-text">
+                        <h3>Cel i charakterystyka projektu</h3>
+                        <p>Niniejsza witryna internetowa powstała jako niezależny, niekomercyjny projekt akademicki poświęcony popularyzacji rzetelnej wiedzy naukowej na temat roli sztucznej inteligencji we współczesnej psychologii, psychoterapii i psychiatrii. W dobie gwałtownego wzrostu zainteresowania modelami generatywnymi i aplikacjami asystenckimi, naszym celem jest dostarczenie neutralnego, pozbawionego sensacji i opartego na twardych dowodach źródła wiedzy dla studentów, badaczy oraz profesjonalistów.</p>
+                    </div>
+
+                    <div class="report-conclusion">
+                        <h3>Wniosek przewodni</h3>
+                        <p>Aktualny stan wiedzy wskazuje na rozwój modelu hybrydowego: AI może wspierać psychoedukację, monitorowanie objawów, dokumentację i dostępność pomocy, ale nie powinna zastępować psychoterapeuty, psychologa ani psychiatry. Szczególnie w kryzysie psychicznym potrzebny jest kontakt z człowiekiem i profesjonalny system interwencji.</p>
+                    </div>
+                </div>
+
+                <!-- Full Bibliography Accordion Drawer (APA 7th) -->
+                <div class="biblio-section reveal" id="bibliography">
+                    <div class="biblio-header" role="button" aria-expanded="false" aria-controls="biblio-list" tabindex="0">
+                        <h3>Pełna bibliografia naukowa</h3>
+                        <div class="biblio-toggle-indicator">
+                            <span>Rozwiń bibliografię (APA 7th)</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5"/></svg>
+                        </div>
+                    </div>
+                    <div class="biblio-list-wrapper" id="biblio-list">
+                        <ul class="biblio-list" role="list">
+                            
+                            <li class="biblio-item" role="listitem">
+                                Bipartisan Policy Center. (2025). <em>The Rise of AI Companions and Digital Relationships: Public Policy & Health Implications</em>. BPC Technology Project.
+                            </li>
+                            
+                            <li class="biblio-item" role="listitem">
+                                Cognitive FX. (2025). <em>Alternative Self-Help Modalities & Stigma Reductions in Modern Psychotherapy</em>. Cognitive Neuroscience Reports, 14(2), 88–97.
+                            </li>
+                            
+                            <li class="biblio-item" role="listitem">
+                                Fitzpatrick, K. K., Darcy, A., & Vierhile, M. (2017). Delivering cognitive behavior therapy to young adults with symptoms of depression and anxiety using a fully automated conversational agent (Woebot): A randomized controlled trial. <em>JMIR Mental Health</em>, 4(2), e19. <a href="https://doi.org/10.2196/mental.7785" target="_blank" rel="noopener">https://doi.org/10.2196/mental.7785</a>
+                            </li>
+
+                            <li class="biblio-item" role="listitem">
+                                George Mason University. (2025). <em>Digital Self-Help and AI Companions Among Young Adults: A Generational Cohort Study</em>. GMU Department of Psychology.
+                            </li>
+
+                            <li class="biblio-item" role="listitem">
+                                Kałwa, A., Grzelak, M., Sitarz, J., & Kowalski, K. (2025). Czy sztuczna inteligencja (robot PARO) może być przydatna w terapii dzieci hospitalizowanych w ostrym oddziale psychiatrycznym. <em>Psychiatria Polska</em>, 59(3), 405–414. <a href="https://doi.org/10.12740/PP/OnlineFirst/182740" target="_blank" rel="noopener">https://doi.org/10.12740/PP/OnlineFirst/182740</a>
+                            </li>
+
+                            <li class="biblio-item" role="listitem">
+                                Low, D. M., Bentley, K. H., & Ghosh, S. S. (2020). Automated voice analysis for detecting depression and predicting suicide risk: A systematic review and meta-analysis. <em>Clinical Psychological Science</em>, 8(6), 991-1014. <a href="https://doi.org/10.1177/2167702620951523" target="_blank" rel="noopener">https://doi.org/10.1177/2167702620951523</a>
+                            </li>
+                            
+                            <li class="biblio-item" role="listitem">
+                                Rajpurkar, P., Chen, E., Banerjee, O., & Topol, E. J. (2022). AI in health and medicine. <em>Nature Medicine</em>, 28(1), 31–38. <a href="https://doi.org/10.1038/s41591-021-01614-0" target="_blank" rel="noopener">https://doi.org/10.1038/s41591-021-01614-0</a>
+                            </li>
+
+                            <li class="biblio-item" role="listitem">
+                                RAND Corporation. (2025). <em>Chatbots and Large Language Models for Youth Mental Health: Scope, Usage, and Clinical Considerations</em>. RAND Health Care.
+                            </li>
+                            
+                            <li class="biblio-item" role="listitem">
+                                Sentio Solutions & Practice Innovations. (2025). <em>Integration of Generative AI in Outpatient Psychotherapy: Efficacy and Patient Perspectives</em>. Sentio Research Group.
+                            </li>
+
+                            <li class="biblio-item" role="listitem">
+                                Sokół-Szawłowska, M. (2025). MoodMon – pierwsza polska aplikacja używająca AI w chorobie afektywnej dwubiegunowej i zaburzeniach depresyjnych nawracających. Wstępna ocena z perspektywy pacjentów. <em>Psychiatria Polska</em>, 59(1), 115–124. <a href="https://doi.org/10.12740/PP/OnlineFirst/174932" target="_blank" rel="noopener">https://doi.org/10.12740/PP/OnlineFirst/174932</a>
+                            </li>
+
+                            <li class="biblio-item" role="listitem">
+                                Stade, E. C., Stirman, S. W., Ungar, L. H., & others. (2024). Large Language Models in Psychotherapy: Essential Questions. <em>NEJM AI</em>, 1(4), 1–12. <a href="https://doi.org/10.1056/AIp2400032" target="_blank" rel="noopener">https://doi.org/10.1056/AIp2400032</a>
+                            </li>
+                            
+                            <li class="biblio-item" role="listitem">
+                                YouGov & Statista. (2024). <em>Public Perception of AI-Powered Mental Health Services: A Transatlantic Survey</em>. Statista Consumer Insights.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-wrapper">
+            <div class="footer-logo">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+                </svg>
+                <span>AI w zdrowiu psychicznym</span>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#home">Góra strony</a></li>
+                <li><a href="#research">Badania</a></li>
+                <li><a href="#statistics">Statystyki</a></li>
+                <li><a href="#risks">Zagrożenia</a></li>
+                <li><a href="#specialists">Dla specjalistów</a></li>
+            </ul>
+            <div class="footer-copy">
+                &copy; 2026 Akademicki Projekt Badawczy "AI w zdrowiu psychicznym". Materiały udostępniane na licencji Creative Commons BY-NC 4.0. Strona stworzona wyłącznie w celach edukacyjnych i informacyjnych.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
